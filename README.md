@@ -15,7 +15,9 @@
 
 <hr>
 
-![4373217_java_logo_logos_icon.png](assets/4373217_java_logo_logos_icon.png)
+
+
+<img src="assets/4373217_java_logo_logos_icon.png" alt="Logo Java" width="200px">
 
 <hr>
 
