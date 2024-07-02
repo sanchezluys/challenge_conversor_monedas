@@ -1,9 +1,13 @@
 package com.alura.modelos;
 
 public enum Monedas {
-    USD("Dólar estadounidense", "dólar", "usd","dolar"),
+    USD("Dólar Estadounidense", "dólar", "usd","dolar","dolares","Dolares"),
+    VES("Bolivar Venezolano", "bs", "Bs"),
+    COP("Pesos Colombianos", "pesos", "Pesos"),
+    BRL("Real Brasilero", "real", "Real"),
     EUR("Euro", "euro", "eur"),
-    PEN("Sol peruano", "sol", "pen"),
+    PEN("Sol Peruano", "sol", "pen","Sol","Soles","soles"),
+    PAB("Balboa Panameño", "balboa", "Balboa","pab"),
     BOB("Boliviano", "boliviano", "bob");
 
     private final String nombre;

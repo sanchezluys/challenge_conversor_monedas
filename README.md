@@ -11,7 +11,7 @@
     <img src="assets/4373217_java_logo_logos_icon.png" alt="Logo Java" width="200px">
 <hr>
 
-### Características del Reto que se personalizarán en esta version
+### Características del Reto que se personalizarán en esta versión
 
 | Item | Descripción                                                       | Observación |
 |------|-------------------------------------------------------------------|-------------|
@@ -29,23 +29,35 @@
 |      | revisando en la documentacion se usará la opcion PAIR de la API   |             |
 |      | ejemplo:                                                          |             |
 |      | https://v6.exchangerate-api.com/v6/MI_API_KEY/pair/COP/USD        |             |
-|      |                                                                   |             |
-|      |                                                                   |             |
 
-### Tecnologias Utilizadas
+### Tecnologías Utilizadas
 
 | Item | Descripción             | Razón                               |
 |------|-------------------------|-------------------------------------|
 | 1    | Java SDK 17             |                                     |
 | 2    | Clase Enum para Monedas | Mejora la mantenibilidad del códido |
-|      |                         |                                     |
 
+### Clases
 
-### Pasos 
+| Item | Descripción           | Observación                                                                            | Tipo  |
+|------|-----------------------|----------------------------------------------------------------------------------------|-------|
+| 1    | Main                  | Función principal                                                                      | Clase |
+| 2    | Menu                  | Contiene los menus de cada caso                                                        | Clase |
+| 3    | Monedas               | Contiene las definiciones de las monedas                                               | Enum  |
+|      |                       |                                                                                        |       |
+| 4    | ConvertirMoneda       | Usa una frase para convertir una moneda en otra                                        | Clase |
+| 5    | VerMonedasDisponibles | Usa la clase Monedas para mostrar un listado de las monedas disponibles                | Clase |
+|      |                       |                                                                                        |       |
+|      | API_KEY               | es necesario crear esa variable en las variables de entorno con su valor de la API key |       |
 
-| Paso | Descripcion                | Observacion | Clase |
-|------|----------------------------|-------------|-------|
-|      | Se crea el encabezado      |             | Menu  |
-|      | Se crea el menu 3 opciones |             | Menu  |
-|      | Se crea la despedida       |             | Menu  |
-|      |                            |             |       |
+### Menú Principal
+![img.png](src/img/img.png)
+
+### Menú convertir un monto
+![img_1.png](src/img/img_1.png)
+
+### Menú ver monedas disponibles
+![img_2.png](src/img/img_2.png)
+
+### Menú salir
+![img_3.png](src/img/img_3.png)

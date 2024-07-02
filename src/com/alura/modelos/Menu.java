@@ -1,5 +1,9 @@
 package com.alura.modelos;
 
+import com.alura.service.ConvertirMoneda;
+import com.alura.service.VerMonedasDisponibles;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -46,32 +50,34 @@ public class Menu
         System.out.println("╔════════════════════════════════════════════════════════╗");
         System.out.println("║                  CONVERTIR MONEDA                      ║");
         System.out.println("╠════════════════════════════════════════════════════════╣");
-        System.out.println("║ 1. Ingrese la frase; por ejemplo:                         ║");
+        System.out.println("║ 1. Ingrese la frase; por ejemplo:                      ║");
         System.out.println("║    10 pesos a dolares                                  ║");
         System.out.println("║    500 soles a pesos                                   ║");
         System.out.println("╚════════════════════════════════════════════════════════╝");
-        System.out.print("Ingrese la frase: ");
+        //System.out.print("Ingrese la frase: ");
     }
     public void muestraMonedas()
     {
         System.out.println("╔════════════════════════════════════════════════════════╗");
         System.out.println("║                  MONEDAS Y PAÍSES                      ║");
         System.out.println("╠════════════════════════════════════════════════════════╣");
-        System.out.println("║ Lista de monedas disponibles:                          ║");
-        System.out.println("║  - USD (Dólar estadounidense/ Dolar Ecuador)           ║");
-        System.out.println("║  - COP (Peso Colombiano)                               ║");
-        System.out.println("║  - VEF (Bolivar Venezolano)                            ║");
-        System.out.println("║  - BRL (Real Brasilero)                                ║");
-        System.out.println("║  - PEN (Sol Peruano)                                   ║");
-        System.out.println("║  - PAB (Balboa Panameño)                               ║");
+        System.out.println("║ Lista de monedas disponibles:                          ");
+        //
+        VerMonedasDisponibles verMonedas = new VerMonedasDisponibles();
+        verMonedas.muestraMonedas();
+        //
         System.out.println("╚════════════════════════════════════════════════════════╝");
+
         System.out.print("Presione cualquier tecla para volver al menu principal");
+        Scanner scanner = new Scanner(System.in);
+        var opcion = scanner.nextLine();
     }
 
-    public void inicio(){
+    public void inicio() throws IOException {
         String opcion="0";
         Scanner scanner = new Scanner(System.in);
         //
+
         while(!opcion.equals("3"))
         {
             this.muestreMenu();
@@ -81,11 +87,13 @@ public class Menu
             switch (opcion)
             {
                 case "1":
-                    System.out.println("Has seleccionado convertir un monto.");
-                    convertirMoneda();
+                    //System.out.println("Has seleccionado convertir un monto.");
+                    this.convertirMoneda();
+                    ConvertirMoneda convertirMoneda = new ConvertirMoneda();
+                    convertirMoneda.convertirMoneda();
                     break;
                 case "2":
-                    System.out.println("Has seleccionado ver las monedas y países disponibles.");
+                    //System.out.println("Has seleccionado ver las monedas y países disponibles.");
                     muestraMonedas();
                     break;
                 case "3":
@@ -94,9 +102,7 @@ public class Menu
                 default:
                     System.out.println("Opción inválida. Por favor, ingrese una opción válida.");
             }
-
         }
-
         scanner.close();
     }
 }
