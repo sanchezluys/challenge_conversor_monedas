@@ -15,7 +15,7 @@
 
 | Item | Descripción                                                       | Observación |
 |------|-------------------------------------------------------------------|-------------|
-| 1    | Será para usuarios que vivan en Colombia                          |             |
+| 1.   | Será para usuarios que vivan en Colombia                          |             |
 |      | por lo que se activaran las monedas que mas interesen en el pais: |             |
 |      |                                                                   |             |
 |      | 1. Peso Colombiano                                                | COP         |
@@ -24,6 +24,13 @@
 |      | 4. Dolar EEUU, incluye Ecuador                                    | USD         |
 |      | 5. Sol Peruano                                                    | PEN         |
 |      | 6. Balboa Panameño                                                | PAB         |
+|      |                                                                   |             |
+| 2.   | La API a usar será la recomendada en el trello.                   |             |
+|      | revisando en la documentacion se usará la opcion PAIR de la API   |             |
+|      | ejemplo:                                                          |             |
+|      | https://v6.exchangerate-api.com/v6/MI_API_KEY/pair/COP/USD        |             |
+|      |                                                                   |             |
+|      |                                                                   |             |
 
 ### Tecnologias Utilizadas
 

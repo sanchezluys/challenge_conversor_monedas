@@ -2,7 +2,6 @@ package com.alura.modelos;
 
 import java.util.Scanner;
 
-import static java.awt.SystemColor.menu;
 
 public class Menu
 {
